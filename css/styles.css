@@ -32,14 +32,23 @@ form {
     font-weight: 100;
 }
 
+.subtitle-text {
+    color: rgb(97, 97, 97);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
 .center-box {
     background-color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0px 4px 0 #00000033, 0 4px 10px 0 #00000030;
+    min-width: 20%;
+    max-width: 20%;
 }
 
 .input-border {
@@ -56,7 +65,85 @@ form {
     /* border-right: none; */
 }
 
-.form-control:focus{
+.form-control-nf:focus{
     border: none;
     box-shadow: none;
+}
+
+.likes-input:focus{
+    border: 1px 1px 1px 10px;
+    border-color: #007bff white #007bff #007bff;
+    box-shadow: none;
+}
+
+.grid-container{
+    width: 100%;
+    display: flex;
+    border-radius: 6px;
+    justify-content: center;
+    box-shadow: 0 0px 1px 0 #00000033, 0 2px 7px 0 #00000030;
+}
+
+.likes-table-container{
+    width: 75%;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+.flag-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    padding: 10px;
+    margin: 10px 0px 10px 10px;
+    border-radius: 6px;
+    width: 25%;
+    color: #e8ecef;
+    background-color: #29a745;
+}
+
+.bottom-link:link {
+    text-decoration: none;
+}
+
+.btn-outline-success
+.btn-outline-success:active{
+    border-color: #29a745;
+    box-shadow:none
+}
+
+.btn-outline-success:hover{
+    background-color: #29a745;
+}
+
+.bottom-edit-div{
+    max-width: 25%;
+}
+
+.normal-input{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.normal-input:focus{
+    border: 2px solid #a141009f;
+    box-shadow: inset 0 0 3px #ff660099, 0 0 3px #ff660099;
+}
+
+/* Resultados */
+
+.result-box {
+    background-color:rgb(194, 194, 194);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0px 4px 0 #00000033, 0 4px 10px 0 #00000030;
+    min-width: 20%;
+    max-width: 20%;
+    border-radius: 4px;
 }
