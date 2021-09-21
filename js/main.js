@@ -1,4 +1,5 @@
 var currentRow = 0;
+var inEdition = false;
 
 function addLike(){
     const likeInput = document.getElementById('like-input');
@@ -30,6 +31,13 @@ function addLike(){
 }
 
 function editLike(row){
+
+    if (inEdition){
+        alert("Solo se puede editar una línea. Recargue la página para poder editar otra")
+        return;
+    }
+
+    inEdition = true;
     var likeField = document.getElementById('like-field-'+row);
     var percentageField = document.getElementById('percentage-field-'+row);
     var editField = document.getElementById('edit-field-'+row);
@@ -37,16 +45,18 @@ function editLike(row){
     const oldLikeValue = likeField.innerText;
     const oldPercentageValue = percentageField.innerText;
 
-    likeField.innerHTML = '<input type="text" id="input-like-edit-'+row+'"class="form-control normal-input" value="'+oldLikeValue+'">'
-    percentageField.innerHTML = '<input type="text" id="input-percentage-edit-'+row+'" class="form-control normal-input" value="'+oldPercentageValue+'">'
+    likeField.innerHTML = '<input type="text" id="input-like-edit-'+row+'"class="form-control normal-input" value="'+oldLikeValue+'" name="gusto">'
+    percentageField.innerHTML = '<input type="text" id="input-percentage-edit-'+row+'" class="form-control normal-input" value="'+oldPercentageValue+'" name="porc">'
     editField.innerHTML = 'En edición'
 
     var editBar = document.getElementById('bottom-edit-div');
-    editBar.innerHTML = '<p class="subtitle-text">Pulse Aceptar para guardar los cambios o cancelar para anularlos</p><button type="button" class="btn btn-outline-secondary">Aceptar</button><button type="button" class="btn btn-outline-danger" onclick="location.reload()">Cancelar</button>'
+    editBar.innerHTML = '<p class="subtitle-text">Pulse Aceptar para guardar los cambios o cancelar para anularlos</p><button type="submit" class="btn btn-outline-secondary">Aceptar</button><button type="button" class="btn btn-outline-danger" onclick="location.reload()">Cancelar</button>'
 
     // bottom.innerHTML = `<div class="row pb-3"><div class="row text-start"><span class="text-secondary">Pulse Aceptar para guardar los cambios o cancelar para anularlos</span></div><div class="row"><div class="col-3"><a class="btn btn-success" onclick="aceptarCambios(${rowNumber})">Aceptar</a></div><div class="col-3"><a class="btn btn-danger" onclick="cancelarCambios(${rowNumber}, '${likesValue}', '${percValue}')">Cancelar</a></div></div></div>`;
 }
 
 function acceptChanges(row){
-    
+
+    inEdition = false;
+
 }
