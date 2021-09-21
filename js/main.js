@@ -49,7 +49,7 @@ function editLike(row){
     editField.innerHTML = 'En edición';
 
     var editBar = document.getElementById('bottom-edit-div');
-    editBar.innerHTML = '<p class="subtitle-text">Pulse Aceptar para guardar los cambios o cancelar para anularlos</p><button type="submit" class="btn btn-outline-secondary">Aceptar</button><button type="button" class="btn btn-outline-danger" onclick="cancelEdit('+row+', '+oldLikeValue+', '+oldPercentageValue+')">Cancelar</button>';
+    editBar.innerHTML = '<p class="subtitle-text">Pulse Aceptar para guardar los cambios o cancelar para anularlos</p><button type="submit" class="btn btn-outline-secondary">Aceptar</button><button type="button" class="btn btn-outline-danger ms-1" onclick="cancelEdit('+row+', '+oldLikeValue+', '+oldPercentageValue+')">Cancelar</button>';
 
 }
 
