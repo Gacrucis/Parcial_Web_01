@@ -45,7 +45,7 @@ function editLike(row){
     const oldPercentageValue = percentageField.innerText;
 
     likeField.innerHTML = '<input type="text" id="input-like-edit-'+row+'"class="form-control normal-input" value="'+oldLikeValue+'" name="gusto">';
-    percentageField.innerHTML = '<input type="text" id="input-percentage-edit-'+row+'" class="form-control normal-input" value="'+oldPercentageValue+'" name="porc">';
+    percentageField.innerHTML = '<input type="text" id="input-percentage-edit-'+row+'" class="form-control normal-input" value="'+oldPercentageValue+'" name="perc">';
     editField.innerHTML = 'En edición';
 
     var editBar = document.getElementById('bottom-edit-div');
@@ -78,7 +78,7 @@ function getResults(){
     inEdition = false;
     const requestParameters = new URLSearchParams(window.location.search);
 
-    document.getElementById("name-label").innerText = requestParameters.get("name");
+    document.getElementById("name-label").innerText = requestParameters.get("nombre");
     document.getElementById("email-label").innerText = requestParameters.get("email");
     document.getElementById("phone-label").innerText = requestParameters.get("telefono");
     document.getElementById("like-label").innerText = requestParameters.get("gusto");
