@@ -52,7 +52,6 @@ function editLike(row){
     var editBar = document.getElementById('bottom-edit-div');
     editBar.innerHTML = '<p class="subtitle-text">Pulse Aceptar para guardar los cambios o cancelar para anularlos</p><button type="submit" class="btn btn-outline-secondary">Aceptar</button><button type="button" class="btn btn-outline-danger" onclick="location.reload()">Cancelar</button>'
 
-    // bottom.innerHTML = `<div class="row pb-3"><div class="row text-start"><span class="text-secondary">Pulse Aceptar para guardar los cambios o cancelar para anularlos</span></div><div class="row"><div class="col-3"><a class="btn btn-success" onclick="aceptarCambios(${rowNumber})">Aceptar</a></div><div class="col-3"><a class="btn btn-danger" onclick="cancelarCambios(${rowNumber}, '${likesValue}', '${percValue}')">Cancelar</a></div></div></div>`;
 }
 
 function acceptChanges(row){
